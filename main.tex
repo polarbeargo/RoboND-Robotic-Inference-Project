@@ -39,7 +39,9 @@ Robotic inference, image classification, Udacity,  NVIDIA DIGITS, deep learning.
 \section{Introduction}
 \label{sec:introduction}
 
-\IEEEPARstart{M}{achine} learning methods base on Deep learning neural network achieved remarkable result in a wide variety domains. introduction should provide some material regarding the history of the problem, why it is important and what is intended to be achieved. If there exists any previous attempts to solve this problem, this is a great place to note these while conveying the differences in your approach (if any). The intent is to provide enough information for the reader to understand why this problem is interesting and setting up the conversation for the solution you have provided
+\IEEEPARstart{M}{achine} learning methods base on Deep learning neural network achieved remarkable result in a wide variety domains. In this paper VGG16 and AlexNet will be trained with Stanford Cars Data set to classify which cars are manufactured by Tesla or BMW? 
+
+introduction should provide some material regarding the history of the problem, why it is important and what is intended to be achieved. If there exists any previous attempts to solve this problem, this is a great place to note these while conveying the differences in your approach (if any). The intent is to provide enough information for the reader to understand why this problem is interesting and setting up the conversation for the solution you have provided
 Use this space to introduce your robotic inference idea and how you wish to apply it. 
 If you have any papers / sites you have referenced for your idea, please make sure to cite them.
 
@@ -47,24 +49,25 @@ If you have any papers / sites you have referenced for your idea, please make su
 Subsection text here.
 
 \subsubsection{Supplied Data set}
-Subsubsection text here.
-
+Udacity supplied dataset contain candy boxes, bottles, and nothing (empty conveyor belt).
 
 \begin{table}[h]
-\caption{Table}
-\label{table_example}
-\begin{center}
-\begin{tabular}{|c||c|}
-\hline
-One & Two\\
-\hline
-Three & Four\\
-\hline
-Three & Four\\
-\hline
-\end{tabular}
-\end{center}
-\end{table}
+ \begin{center}
+      \begin{tabular}{ |c|c|c| } 
+       \hline
+       Class & Images & Image Shape \\
+       \hline
+       Candy Box & 1871 & 256x256x3 \\ 
+       Bottle & 3426 & 256x256x3 \\ 
+       Nothing & 2273 & 256x256x3 \\
+       \hline
+       Total & 7570 & \\
+       \hline
+      \end{tabular}
+      \caption{Count of supplied data images}
+      \label{table:1}
+      \end{center}
+      \end{table}
 
 
 
