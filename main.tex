@@ -24,7 +24,7 @@
 \begin{abstract}
 In this project,NVIDIA DIGITS workflow are used for rapidly prototype ideas that can be deployed on the Jetson
 near real time. With DIGITS prototype classification networks and training a CNN on the
-supplied data and also train another CNN using public Dataset.
+supplied data and also train another CNN using Stanford Cars Dataset published by Jonathan Krause, Michael Stark, Jia Deng, Li Fei-Fei in 3D Object Representations for Fine-Grained Categorization 4th IEEE Workshop on 3D Representation and Recognition, at ICCV 2013 (3dRR-13). Sydney, Australia. Dec. 8, 2013.
 \end{abstract}
 
 % Note that keywords are not normally used for peerreview papers.
@@ -39,7 +39,7 @@ Robotic inference, image classification, Udacity,  NVIDIA DIGITS, deep learning.
 \section{Introduction}
 \label{sec:introduction}
 
-\IEEEPARstart{T}{he} introduction should provide some material regarding the history of the problem, why it is important and what is intended to be achieved. If there exists any previous attempts to solve this problem, this is a great place to note these while conveying the differences in your approach (if any). The intent is to provide enough information for the reader to understand why this problem is interesting and setting up the conversation for the solution you have provided
+\IEEEPARstart{M}{achine} learning methods base on Deep learning neural network achieved remarkable result in a wide variety domains. introduction should provide some material regarding the history of the problem, why it is important and what is intended to be achieved. If there exists any previous attempts to solve this problem, this is a great place to note these while conveying the differences in your approach (if any). The intent is to provide enough information for the reader to understand why this problem is interesting and setting up the conversation for the solution you have provided
 Use this space to introduce your robotic inference idea and how you wish to apply it. 
 If you have any papers / sites you have referenced for your idea, please make sure to cite them.
 
@@ -71,6 +71,16 @@ Three & Four\\
    
 
 \section{Background / Formulation}
+The Stanford Cars dataset contains 16,185 images of 196 classes of cars. The data is split into 8,144 training images and 8,041 testing images, where each class has been split roughly in a 50-50 split. Classes are typically at the level of Make, Model, Year, ex. 2012 Tesla Model S or 2012 BMW M3 coupe.
+
+ The intuition is from:
+ %example for Bullet point list
+
+\begin{itemize}
+\item Can you form a model that can tell the difference between cars by type or colour?
+\item Which cars are manufactured by Tesla vs BMW?
+\end {itemize}
+ 
 At this stage, you should begin diving into the technical details of your approach by explaining to the reader how parameters were defined, what type of network was chosen, and the reasons these items were performed. This should be factual and authoritative, meaning you should not use language such as “I think this will work” or “Maybe a network with this architecture is better..”. Instead, focus on items similar to, ”A 3-layer network architecture was chosen with X, Y, and Z parameters” 
 Explain why you chose the network you did for the supplied data set and then why you chose the network used for your robotic inference project. \cite{lamport1994latex}
 
