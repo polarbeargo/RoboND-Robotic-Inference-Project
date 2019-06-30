@@ -24,7 +24,7 @@
 \begin{abstract}
 In this project,NVIDIA DIGITS workflow are used for rapidly prototype ideas that can be deployed on the Jetson
 near real time. With DIGITS prototype classification networks and training a CNN on the
-supplied data and also train another CNN using Stanford Cars Dataset published by Jonathan Krause, Michael Stark, Jia Deng, Li Fei-Fei in 3D Object Representations for Fine-Grained Categorization 4th IEEE Workshop on 3D Representation and Recognition, at ICCV 2013 (3dRR-13). Sydney, Australia. Dec. 8, 2013.
+supplied data and also train another CNN using a combination of the GTI vehicle image database, the KITTI vision benchmark suite, and examples extracted from the Udacity Self Driving Car Nanodegree - Vehicle Detection project video itself.
 \end{abstract}
 
 % Note that keywords are not normally used for peerreview papers.
@@ -47,7 +47,13 @@ If you have any papers / sites you have referenced for your idea, please make su
 
 \subsection{Supplied Data set}
 Subsection text here.
-
+%example for inserting image
+\begin{figure}[thpb]
+      \centering
+      \includegraphics[width=\linewidth]{suplieDataset.png}
+      \caption{Supplied Data set.}
+      \label{fig:robot1}
+\end{figure}
 \subsubsection{Supplied Data set}
 Udacity supplied dataset contain candy boxes, bottles, and nothing (empty conveyor belt).
 
@@ -68,16 +74,36 @@ Udacity supplied dataset contain candy boxes, bottles, and nothing (empty convey
       \label{table:1}
       \end{center}
       \end{table}
+%example for inserting image
+\begin{figure}[thpb]
+      \centering
+      \includegraphics[width=\linewidth]{VGG16AcurracyLoss.png}
+      \caption{VGG16 pretrained model}
+      \label{fig:robot1}
+\end{figure}
+\begin{figure}[thpb]
+      \centering
+      \includegraphics[width=\linewidth]{AlexNet.png}
+      \caption{AlexNet}
+      \label{fig:robot1}
+\end{figure}
+%example for inserting image
+\begin{figure}[thpb]
+      \centering
+      \includegraphics[width=\linewidth]{evaluate.png}
+      \caption{Evaluate training result in DIGITS Workspace}
+      \label{fig:robot1}
+\end{figure}
 
 \section{Background / Formulation}
 %example for inserting image
 \begin{figure}[thpb]
       \centering
-      \includegraphics[width=\linewidth]{stanfordCars.png}
-      \caption{Stanford Cars dataset.}
+      \includegraphics[width=\linewidth]{mixDataset.png}
+      \caption{Combination data set.}
       \label{fig:robot1}
 \end{figure}
-The Stanford Cars dataset contains 16,185 images of 196 classes of cars. The data is split into 8,144 training images and 8,041 testing images, where each class has been split roughly in a 50-50 split. Classes are typically at the level of Make, Model, Year, ex. 2012 Tesla Model S or 2012 BMW M3 coupe.
+These example images come from a combination of the GTI vehicle image database, the KITTI vision benchmark suite, and examples extracted from the project video itself. Penn-Fudan Database for Pedestrian Detection and Segmentation
 
  The intuition is from:
  %example for Bullet point list
@@ -105,44 +131,50 @@ Explain why you chose the network you did for the supplied data set and then why
 \end{enumerate}
 
 \section{Data Acquisition}
-%example for inserting image
-\begin{figure}[thpb]
-      \centering
-      \includegraphics[width=\linewidth]{suplieDataset.png}
-      \caption{Supplied Data set.}
-      \label{fig:robot1}
-\end{figure}
+
 This section should discuss the data set. Items to include are the number of images, size of the images, the types of images (RGB, Grayscale, etc.), how these images were collected (including the method). Providing this information is critical if anyone would like to replicate your results. After all, the intent of reports such as these are to convey information and build upon ideas so you want to ensure others can validate your process.
 Justifying why you gathered data in this way is a helpful point, but sometimes this may be omitted here if the problem has been stated clearly in the introduction.
 It is a great idea here to have at least one or two images showing what your data looks like for the reader to visualize.
 
-\section{Results}
+\section{Results-}
+%example for inserting image
+\begin{figure}[thpb]
+      \centering
+      \includegraphics[width=\linewidth]{GoogLeNET.png}
+      \caption{Combination data train with GoogLeNet}
+      \label{fig:robot1}
+\end{figure}
+
 This is typically the hardest part of the report for many. You want to convey your results in an unbiased fashion. If you results are good, you can objectively note this. Similarly, you may do this if they are bad as well. You do not want to justify your results here with discussion; this is a topic for the next session. 
 Present the results of your robotics project model and the model you used for the supplied data with the appropriate accuracy and inference time
 For demonstrating your results, it is incredibly useful to have some charts, tables, and/or graphs for the reader to review. This makes ingesting the information quicker and easier.
-%example for inserting image
+
 \begin{figure}[thpb]
       \centering
-      \includegraphics[width=\linewidth]{VGG16AcurracyLoss.png}
-      \caption{VGG16 pretrained model}
+      \includegraphics[width=\linewidth]{CarInferenceResult.png}
+      \caption{GoogLeNet Model Inference Result: Car}
+      \label{fig:robot1}
+\end{figure}
+\begin{figure}[thpb]
+      \centering
+      \includegraphics[width=\linewidth]{GoogLenetPed.png}
+      \caption{GoogLeNet Model Inference Result: Pedestrian}
+      \label{fig:robot1}
+\end{figure}
+\begin{figure}[thpb]
+      \centering
+      \includegraphics[width=\linewidth]{notCarInferenceGoodResult.png}
+      \caption{GoogLeNet Model Inference Result: Not Car}
+      \label{fig:robot1}
+\end{figure}
+\begin{figure}[thpb]
+      \centering
+      \includegraphics[width=\linewidth]{NotCarInference.png}
+      \caption{GoogLeNet Model Inference Result: Not Car}
       \label{fig:robot1}
 \end{figure}
 
-%example for inserting image
-\begin{figure}[thpb]
-      \centering
-      \includegraphics[width=\linewidth]{evaluate.png}
-      \caption{Evaluate training result in DIGITS Workspace}
-      \label{fig:robot1}
-\end{figure}
 
-%example for inserting image
-\begin{figure}[thpb]
-      \centering
-      \includegraphics[width=\linewidth]{Learning_rate.png}
-      \caption{Learning rate vs Epochs}
-      \label{fig:robot1}
-\end{figure}
 \section{Discussion}
 This is the only section of the report where you may include your opinion. However, make sure your opinion is based on facts. If your results are poor, make mention of what may be the underlying issues. If the results are good, why do you think this is the case? Again, avoid writing in the first person (i.e. Do not use words like “I” or “me”). If you really find yourself struggling to avoid the word “I” or “me”; sometimes, this can be avoid with the use of the word “one”. As an example: instead of : “I think the accuracy on my dataset is low because the images are too small to show the necessary detail” try: “one may believe the accuracy on the dataset is low because the images are too small to show the necessary detail”. They say the same thing, but the second avoids the first person. 
 Reflect on which is more important, inference time or accuracy, in regards to your robotic inference project.
@@ -153,5 +185,14 @@ For Future work,address areas of work that you may not have addressed in your re
 
 \bibliography{bib}
 \bibliographystyle{ieeetr}
+[2] The Caltech Database (Computational Vision at California Institute of Technology, Pasadena), http://www.vision.caltech.edu/html-files/archive.html. Accessed 14 May 2011.
+
+[3] R Fergus, P Perona, A Zisserman, in Proceedings of the IEEE Computer Society Conference on Computer Vision and Pattern Recognition, Madison, Wisconsin, 16–22 June 2003.
+
+[4] The TU Graz-02 Database (Graz University of Technology). Accessed 14 May 2011. 
+
+[5] A Opelt, A Pinz, in Proceedings of the 14th Scandinavian Conference on Image Analysis, Joensuu, Finland, 19–22 June 2005.
+
+[6] Are we ready for Autonomous Driving? The KITTI Vision Benchmark Suite, Andreas Geiger, Philip Lenz and Raquel Urtasun, Conference on Computer Vision and Pattern	Recognition (CVPR).
 
 \end{document}
