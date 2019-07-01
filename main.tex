@@ -155,12 +155,10 @@ For demonstrating your results, it is incredibly useful to have some charts, tab
 
 
 \section{Discussion}
-This is the only section of the report where you may include your opinion. However, make sure your opinion is based on facts. If your results are poor, make mention of what may be the underlying issues. If the results are good, why do you think this is the case? Again, avoid writing in the first person (i.e. Do not use words like “I” or “me”). If you really find yourself struggling to avoid the word “I” or “me”; sometimes, this can be avoid with the use of the word “one”. As an example: instead of : “I think the accuracy on my dataset is low because the images are too small to show the necessary detail” try: “one may believe the accuracy on the dataset is low because the images are too small to show the necessary detail”. They say the same thing, but the second avoids the first person. 
-Reflect on which is more important, inference time or accuracy, in regards to your robotic inference project.
+There is a slightly improvement when switch model from AlexNet to GoogLeNet while GoogLeNet need more time to train and perform inference results. We can use improved hardware like Jetson TX2 and Tensor RT 3.0 to improve this in a very fast time.
 
 \section{Conclusion / Future work}
-This section is intended to summarize your report. Your summary should include a recap of the results, did this project achieve what you attempted, and is this a commercially viable product? 
-For Future work,address areas of work that you may not have addressed in your report as possible next steps. For future work, this could be due to time constraints, lack of currently developed methods / technology, and areas of application outside of your current implementation. Again, avoid the use of the first-person.
+GoogLeNet have better accuracy for sensor like camera and video on perform image classification task on detect pedestrian, car and their background environment with higher accuracy than AlexNet but also will cost longer time to inference results and training images. Base on the research and studying in Udacity Self-Driving Car Engineer Nanodegree - Semantic Segmentation Project [9], the inference time to perform real-time computer vision is crucial hence in the future work we can appliy transfer learning skill on VGG16 for less inference time and higher accuracy. Another way to improve accuracy base on our current model we can add more image data but this will prolong training time and cost more storage space.
 
 \bibliography{bib}
 \bibliographystyle{ieeetr}
@@ -176,5 +174,7 @@ For Future work,address areas of work that you may not have addressed in your re
 
 [7] Udacity Self-Driving car Engineer Vehicle detection project.
 
-[8] Object Detection Combining Recognition and Segmentation. Liming Wang, Jianbo Shi, Gang Song, I-fan Shen. To Appear in ACCV 2007
+[8] Object Detection Combining Recognition and Segmentation. Liming Wang, Jianbo Shi, Gang Song, I-fan Shen. To Appear in ACCV 2007.
+
+[9] Udacity Self-Driving Car Engineer Nanodegree - Semantic Segmentation Project.
 \end{document}
