@@ -39,7 +39,7 @@ Robotic inference, image classification, Udacity, NVIDIA DIGITS, deep learning.
 \section{Introduction}
 \label{sec:introduction}
 
-\IEEEPARstart{M}{achine} learning methods base on Deep learning neural network such as Classification Network and Detection Network achieved remarkable result in a wide variety domains such as detect skin cancer,Facial recognition and self-driving car to detect bike, pedestrian and other vehicle to reduce traffic accident. In this paper VGG16, AlexNet and GoogLeNet will be trained with Supplied data set and a combination data set [7][8] to classify cars, pedestrian and not car objects. Selected model will be train and evaluate on Supplied data set from Udacity then train with the mixed public data set.
+\IEEEPARstart{M}{achine} learning methods base on Deep learning neural network such as Classification Network and Detection Network achieved remarkable result in a wide variety domains such as detect skin cancer,Facial recognition and self-driving car to detect bike, pedestrian and other vehicle to reduce traffic accident. In this paper VGG16, AlexNet and GoogLeNet will be trained with Supplied data set and a combination data set [6][7] to classify cars, pedestrian and not car objects. Selected model will be train and evaluate on Supplied data set from Udacity then train with the mixed public data set.
 \subsection{Supplied Data set}
 In this section we will briefly introduce the supplied data set from Udacity.
 The following are some examples of the data:
@@ -65,9 +65,16 @@ These example images come from a combination of the GTI vehicle image database, 
 \item Can you form a model that can tell the difference between cars or not cars?
 \item Can you form a model that can tell the difference between Pedestrian and cars?
 \end {itemize}
- 
-Explain why you chose the network you did for the supplied data set and then why you chose the network used for your robotic inference project. \cite{lamport1994latex}
-
+ %example for inserting image
+\begin{figure}[thpb]
+      \centering
+      \includegraphics[width=\linewidth]{BenchmarkAnalysisofRepresentativeDeep NeuralNetworkArchitectures.png}
+      \caption{Benchmark Analysis of Representative
+Deep Neural Network Architectures [9].}
+      \label{fig:robot1}
+\end{figure}
+ Compare to different Neural Network architecture(see Fig. 2)and
+ accuracy. VGG16 pretrained model, AlexNet and GoogLeNet seems to be a good choice.
 \section{Data Acquisition}
 Udacity supplied data set contain 3 classes Bottle, candy box and nothing.
 \begin{table}[h]
@@ -87,7 +94,7 @@ Udacity supplied data set contain 3 classes Bottle, candy box and nothing.
       \label{table:1}
       \end{center}
       \end{table}
-The combination of public data set is collect from Udacity Self-Driving car Engineer Vehicle detection project[7] and Penn-Fudan Database for Pedestrian Detection and Segmentation [8].
+The combination of public data set is collect from Udacity Self-Driving car Engineer Vehicle detection project[6] and Penn-Fudan Database for Pedestrian Detection and Segmentation [7].
 %example for inserting image
 \begin{figure}[thpb]
       \centering
@@ -97,10 +104,7 @@ The combination of public data set is collect from Udacity Self-Driving car Engi
 \end{figure}
 
 \section{Results-}
-
-This is typically the hardest part of the report for many. You want to convey your results in an unbiased fashion. If you results are good, you can objectively note this. Similarly, you may do this if they are bad as well. You do not want to justify your results here with discussion; this is a topic for the next session. 
-Present the results of your robotics project model and the model you used for the supplied data with the appropriate accuracy and inference time
-For demonstrating your results, it is incredibly useful to have some charts, tables, and/or graphs for the reader to review. This makes ingesting the information quicker and easier.
+In this section, we will discuss the result as two part. The training result on Udacity supplide data set and on the mixed public data set from Penn-Fudan Database for Pedestrian Detection and Segmentation and the GTI vehicle image database, the KITTI vision benchmark suite, and examples extracted from the Udacity Self-Driving car Engineer Vehicle detection project [6] video itself. Supplied data set was used on test VGG16 pretrained model and AlexNet. Acurracy of VGG16 pretrained model is really close to near 100 percent slightly higher than AlexNet which accuracy is close to 96-97 percent when applied 50 epochs. After test on supplied data set as reference, then we choose GoogLeNet to train on our mixed public data set. The accuracy is higher than AlexNet when using 50 epochs same as reference paper [10]. Result are show in figure 4-11.
 %example for inserting image
 \begin{figure}[thpb]
       \centering
@@ -155,26 +159,29 @@ For demonstrating your results, it is incredibly useful to have some charts, tab
 
 
 \section{Discussion}
-There is a slightly improvement when switch model from AlexNet to GoogLeNet while GoogLeNet need more time to train and perform inference results. We can use improved hardware like Jetson TX2 and Tensor RT 3.0 to improve this in a very fast time.
+There is a slightly improvement when switch model from AlexNet to GoogLeNet while GoogLeNet need more time to train and perform inference results. We can use improved hardware like Jetson TX2 and Tensor RT 3.0 to improve performance in a very fast time.
 
 \section{Conclusion / Future work}
-GoogLeNet have better accuracy for sensor like camera and video on perform image classification task on detect pedestrian, car and their background environment with higher accuracy than AlexNet but also will cost longer time to inference results and training images. Base on the research and studying in Udacity Self-Driving Car Engineer Nanodegree - Semantic Segmentation Project [9], the inference time to perform real-time computer vision is crucial hence in the future work we can appliy transfer learning skill on VGG16 for less inference time and higher accuracy. Another way to improve accuracy base on our current model we can add more image data but this will prolong training time and cost more storage space.
+GoogLeNet have better accuracy for sensor like camera and video on perform image classification task on detect pedestrian, car and their background environment with higher accuracy than AlexNet but will cost longer time to inference results and training images. Base on the research and studying in Udacity Self-Driving Car Engineer Nanodegree - Semantic Segmentation Project [9], the inference time to perform real-time computer vision is crucial hence in the future work we can apply transfer learning skill on VGG16 for less inference time and higher accuracy. Another way to improve accuracy base on our current model we can add more image data but this will prolong training time and cost more storage space.
 
 \bibliography{bib}
 \bibliographystyle{ieeetr}
-[2] The Caltech Database (Computational Vision at California Institute of Technology, Pasadena), http://www.vision.caltech.edu/html-files/archive.html. Accessed 14 May 2011.
 
-[3] R Fergus, P Perona, A Zisserman, in Proceedings of the IEEE Computer Society Conference on Computer Vision and Pattern Recognition, Madison, Wisconsin, 16–22 June 2003.
+[1] The Caltech Database (Computational Vision at California Institute of Technology, Pasadena), http://www.vision.caltech.edu/html-files/archive.html. Accessed 14 May 2011.
 
-[4] The TU Graz-02 Database (Graz University of Technology). Accessed 14 May 2011. 
+[2] R Fergus, P Perona, A Zisserman, in Proceedings of the IEEE Computer Society Conference on Computer Vision and Pattern Recognition, Madison, Wisconsin, 16–22 June 2003.
 
-[5] A Opelt, A Pinz, in Proceedings of the 14th Scandinavian Conference on Image Analysis, Joensuu, Finland, 19–22 June 2005.
+[3] The TU Graz-02 Database (Graz University of Technology). Accessed 14 May 2011. 
 
-[6] Are we ready for Autonomous Driving? The KITTI Vision Benchmark Suite, Andreas Geiger, Philip Lenz and Raquel Urtasun, Conference on Computer Vision and Pattern	Recognition (CVPR).
+[4] A Opelt, A Pinz, in Proceedings of the 14th Scandinavian Conference on Image Analysis, Joensuu, Finland, 19–22 June 2005.
 
-[7] Udacity Self-Driving car Engineer Vehicle detection project.
+[5] Are we ready for Autonomous Driving? The KITTI Vision Benchmark Suite, Andreas Geiger, Philip Lenz and Raquel Urtasun, Conference on Computer Vision and Pattern	Recognition (CVPR).
 
-[8] Object Detection Combining Recognition and Segmentation. Liming Wang, Jianbo Shi, Gang Song, I-fan Shen. To Appear in ACCV 2007.
+[6] Udacity Self-Driving car Engineer Vehicle detection project.
 
-[9] Udacity Self-Driving Car Engineer Nanodegree - Semantic Segmentation Project.
+[7] Object Detection Combining Recognition and Segmentation. Liming Wang, Jianbo Shi, Gang Song, I-fan Shen. To Appear in ACCV 2007.
+
+[8] Udacity Self-Driving Car Engineer Nanodegree - Semantic Segmentation Project.
+
+[9] Benchmark Analysis of Representative Deep Neural Network Architectures. SIMONE BIANCO1,REMI CADENE2,LUIGI CELONA1 AND PAOLO NAPOLETANO,https://arxiv.org/pdf/1810.00736.pdf,ACCESS.2017.
 \end{document}
